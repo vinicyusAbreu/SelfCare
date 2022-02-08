@@ -1,0 +1,31 @@
+@use '../1-base/variaveis';
+@use '../1-base/base-mixins';
+
+form {
+    button {
+        border: none;
+        outline: none;
+        font-size: 2rem;
+        font-weight: 900;
+        color: whitesmoke;
+        padding: 12.5px 30px;
+        text-align: center;
+        background-color: variaveis.$texto-verde;
+        border-radius: 0px 5px 5px 0px;
+        cursor: pointer;
+        border: 1px solid variaveis.$texto-verde;
+        transition: all 0.3s ease-in-out;
+        @include base-mixins.mobile {
+            border-radius: 5px;
+            font-size: 1.6rem;
+            padding: 12px 0px;
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: lighten($color: variaveis.$texto-verde, $amount: 5%);
+            border-color: lighten($color: variaveis.$texto-verde, $amount: 5%);
+
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use "../1-base/variaveis";
+@use "../1-base/base-mixins";
+@use "layouts-mixins";
+
+footer {
+    margin-top: -5px;
+    background-color: variaveis.$bg-cinza;
+
+    .footer-container {
+        @include layouts-mixins.container-layout;
+        flex-wrap: wrap;
+        height: 94px;
+        ul:nth-child(2) {
+            li {
+                img {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    @include base-mixins.mobile {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

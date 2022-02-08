@@ -1,0 +1,113 @@
+@use "../1-base/variaveis";
+@use "../1-base/base-mixins";
+@use "layouts-mixins";
+
+.noticias {
+    background-color: variaveis.$bg-cinza;
+    margin-top: 50px;
+
+    &-container {
+        padding: 50px 0 30px 0;
+        @include layouts-mixins.container-layout;
+        flex-wrap: wrap;
+
+        ul {
+            @include base-mixins.mobile {
+                margin-bottom: 50px;
+            }
+
+            ;
+
+
+            li {
+
+                width: fit-content;
+
+                margin-bottom: 10px;
+
+                min-width: 150px;
+
+                .noticias-info {
+                    color: variaveis.$texto-preto;
+                    font-weight: 600;
+                    font-size: 2rem;
+
+                    @include base-mixins.mobile {
+                        font-size: 1.8rem;
+                    }
+
+                    ;
+
+
+                    &:after {
+                        display: block;
+                        content: '';
+                        border-bottom: solid 3px variaveis.$texto-verde;
+                        transform: scaleX(0);
+                        transition: transform 250ms ease-in-out;
+                    }
+
+                    &:hover:after {
+                        transform: scaleX(1);
+                    }
+
+
+
+                    &:after {
+                        transform-origin: 0% 50%;
+                    }
+                }
+
+                &:nth-child(1) .noticias-info:hover:after {
+                    transform: scaleX(.5);
+                }
+            }
+        }
+    }
+
+    &-form {
+
+
+        h2 {
+            color: variaveis.$texto-preto;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+
+            @include base-mixins.mobile {
+                font-size: 1.8rem;
+            }
+
+            ;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            @include base-mixins.mobile {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+
+            }
+
+
+
+        }
+
+        @include base-mixins.mobile {
+            width: 100%;
+
+        }
+
+        ;
+    }
+
+    hr {
+        border: 1px solid variaveis.$borda-cinza;
+    }
+
+}

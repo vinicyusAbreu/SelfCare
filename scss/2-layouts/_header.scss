@@ -1,0 +1,30 @@
+@use "../1-base/variaveis";
+@use "../1-base/base-mixins";
+@use "layouts-mixins";
+
+header {
+    .container-navbar {
+        height: 94px;
+        @include layouts-mixins.container-layout;
+        .logo {
+            img {
+                height: 4rem;
+                @include base-mixins.mobile {
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include base-mixins.mobile {
+        height: 35vh;
+    }
+}

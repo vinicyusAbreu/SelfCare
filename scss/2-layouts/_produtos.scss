@@ -1,0 +1,71 @@
+@use "../1-base/variaveis";
+@use "../1-base/base-mixins";
+@use "layouts-mixins";
+
+.produto {
+
+    &-aviso {
+        @include layouts-mixins.container-layout;
+        height: 94px;
+
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: variaveis.$texto-preto;
+
+            @include base-mixins.mobile {
+                font-size: 1.8rem;
+            }
+
+            ;
+
+        }
+
+        p {
+            font-size: 2rem;
+            text-transform: capitalize;
+            color: variaveis.$texto-preto;
+
+            @include base-mixins.mobile {
+                font-size: 1.6rem;
+            }
+
+            ;
+
+        }
+
+
+    }
+
+    hr {
+        border: 1px solid variaveis.$borda-cinza;
+        margin-bottom: 50px;
+
+    }
+
+    &-container {
+        
+        @include layouts-mixins.container-layout;
+
+        justify-content: center;
+        gap: 5rem;
+
+
+        @include base-mixins.mobile {
+            gap: 0;
+            
+            justify-content: space-between;
+        }
+
+        @for $index from 1 through 9 {
+            .card:nth-child(#{$index}) {
+                .card-bg {
+                    background-image: url("../img/produto_#{$index}.jpg");
+                }
+            }
+        }
+
+    }
+}
