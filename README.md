@@ -10,7 +10,7 @@ O projeto de uma loja online de produtos de beleza.
 
 Veja abaixo um gif do projeto.</br>
 
-[![Image from Gyazo](https://i.gyazo.com/d598e7ab275d5dd04de7b5b58af2007e.gif)](https://gyazo.com/d598e7ab275d5dd04de7b5b58af2007e)
+[![Image from Gyazo](https://media.giphy.com/media/eOlnWwRpKApNU6O4gI/giphy.gif)](https://gyazo.com/d598e7ab275d5dd04de7b5b58af2007e)
 
 ## 🎯 Objetivo do projeto
 
